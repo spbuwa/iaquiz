@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Administration Quiz (भारतीय प्रशासनाची ओळख - प्रश्नमंजुषा)</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; }
+        .quiz-container { max-width: 900px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.15); }
+        h1 { text-align: center; color: #333; border-bottom: 2px solid #0056b3; padding-bottom: 10px; margin-bottom: 20px;}
+        /* User Details Styling */
+        .user-details { border: 2px solid #ffc107; padding: 15px; margin-bottom: 30px; border-radius: 8px; background-color: #fffaf0; }
+        .user-details input { width: calc(50% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .user-details h2 { color: #856404; margin-top: 0; }
+        /* Quiz Styling */
+        .question { margin-bottom: 25px; padding: 18px; border: 1px solid #cceeff; border-left: 5px solid #0056b3; border-radius: 5px; background-color: #f9fcff; }
+        .question p { font-weight: bold; margin-bottom: 10px; color: #004085; }
+        .options label { display: block; margin: 8px 0; cursor: pointer; padding: 3px; }
+        .options label:hover { background-color: #e6f7ff; }
+        .options input[type="radio"] { margin-right: 12px; transform: scale(1.1); }
+        .feedback { margin-top: 10px; font-weight: bold; padding: 5px; border-radius: 3px; }
+        .correct { color: #155724; background-color: #d4edda; border: 1px solid #c3e6cb; }
+        .incorrect { color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; }
+        .submit-btn { display: block; width: 100%; padding: 12px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; margin-top: 30px; transition: background-color 0.3s; }
+        .submit-btn:hover { background-color: #1e7e34; }
+        .results { margin-top: 30px; text-align: center; font-size: 1.3em; border-top: 3px solid #0056b3; padding-top: 20px; background-color: #fff; border-radius: 8px; }
+        .copy-output { margin-top: 15px; padding: 10px; border: 1px dashed #333; background-color: #eee; font-family: monospace; font-size: 1em; text-align: left; }
+        .copy-instruction { color: red; font-size: 0.9em; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>🇮🇳 Introduction to Indian Administration Quiz (30 MCQs)</h1>
+    <p>Based on the Syllabus: Utkranti & Constitutional Context, Personnel, Finance, Integrity, and Contemporary Issues.</p>
+    
+    <form id="quizForm">
+        <div class="user-details">
+            <h2>📝 User Details (परीक्षार्थी माहिती)</h2>
+            <input type="text" id="surname" placeholder="Surname (आडनाव)" required>
+            <input type="text" id="name" placeholder="Name (नाव)" required>
+            <input type="text" id="class" placeholder="Class (वर्ग)" required>
+            <input type="text" id="rollno" placeholder="Roll Number (क्रमांक)" required>
+        </div>
+        <div class="question" id="q1">
+            <p>1. भारतीय राज्यघटनेचे कोणते कलम अखिल भारतीय सेवांशी संबंधित आहे? (Which article of the Indian Constitution deals with the All India Services?)</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> Article 315</label>
+                <label><input type="radio" name="q1" value="B"> Article 312</label>
+                <label><input type="radio" name="q1" value="C"> Article 309</label>
+                <label><input type="radio" name="q1" value="D"> Article 320</label>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <div class="question" id="q2">
+            <p>2. भारतात जिल्हा प्रशासनाचा कार्यात्मक प्रमुख कोण असतो? (Who is the operational head of the District Administration in India?)</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> Commissioner (आयुक्त)</label>
+                <label><input type="radio" name="q2" value="B"> Collector/District Magistrate (जिल्हाधिकारी)</label>
+                <label><input type="radio" name="q2" value="C"> Superintendent of Police (पोलीस अधीक्षक)</label>
+                <label><input type="radio" name="q2" value="D"> Chief Executive Officer (मुख्य कार्यकारी अधिकारी)</label>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+        
+        <div class="question" id="q3">
+            <p>3. लोकलेखा समिती (PAC) मुख्यतः कोणत्या प्राधिकरणाच्या अहवालाची छाननी करते? (The Public Accounts Committee (PAC) primarily scrutinizes the report of which authority?)</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> NITI Aayog (नीती आयोग)</label>
+                <label><input type="radio" name="q3" value="B"> Reserve Bank of India (भारतीय रिझर्व्ह बँक)</label>
+                <label><input type="radio" name="q3" value="C"> Comptroller and Auditor General (CAG) (महालेखापाल)</label>
+                <label><input type="radio" name="q3" value="D"> Ministry of Finance (अर्थ मंत्रालय)</label>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <div class="question" id="q4">
+            <p>4. नव्याने भरती झालेल्या अखिल भारतीय सेवा (IAS) अधिकाऱ्यांच्या प्रशिक्षणाची जबाबदारी कोणत्या संस्थेची आहे? (Which institution is responsible for the training of newly recruited All India Service officers (IAS)?)</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> YASHADA (यशदा)</label>
+                <label><input type="radio" name="q4" value="B"> Indian Institute of Public Administration (IIPA)</label>
+                <label><input type="radio" name="q4" value="C"> National Defence Academy (NDA)</label>
+                <label><input type="radio" name="q4" value="D"> Lal Bahadur Shastri National Academy of Administration (LBSNAA)</label>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <div class="question" id="q5">
+            <p>5. लोकपाल आणि लोकायुक्त कायद्याचे प्रशासनातील कोणते वैशिष्ट्य वाढवण्याचे उद्दिष्ट आहे? (The Lokpal and Lokayukta Act primarily aims to promote which feature in administration?)</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> Efficiency (कार्यक्षमता)</label>
+                <label><input type="radio" name="q5" value="B"> Transparency (पारदर्शकता)</label>
+                <label><input type="radio" name="q5" value="C"> Integrity (सचोटी)</label>
+                <label><input type="radio" name="q5" value="D"> Decentralization (विकेंद्रीकरण)</label>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <div class="question" id="q6">
+            <p>6. भारतात 'सार्वजनिक तिजोरीचा संरक्षक' कोणाला मानले जाते? (Who is considered the 'Guardian of the Public Purse' in India?)</p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> Prime Minister (पंतप्रधान)</label>
+                <label><input type="radio" name="q6" value="B"> Finance Minister (अर्थमंत्री)</label>
+                <label><input type="radio" name="q6" value="C"> Comptroller and Auditor General (CAG) (महालेखापाल)</label>
+                <label><input type="radio" name="q6" value="D"> President (राष्ट्रपती)</label>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <div class="question" id="q7">
+            <p>7. राज्यस्तरीय अधिकाऱ्यांसाठी यशदा (YASHADA) हे प्राथमिक प्रशिक्षण संस्था कोणत्या शहरात आहे? (YASHADA is the primary training institute for state-level officials, located in which city?)</p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> Nagpur (नागपूर)</label>
+                <label><input type="radio" name="q7" value="B"> Mumbai (मुंबई)</label>
+                <label><input type="radio" name="q7" value="C"> Pune (पुणे)</label>
+                <label><input type="radio" name="q7" value="D"> Nashik (नाशिक)</label>
+            </div>
+            <div class="feedback" id="feedback7"></div>
+        </div>
+
+        <div class="question" id="q8">
+            <p>8. संसदेच्या अंदाज समितीचे खालीलपैकी कोणते प्राथमिक कार्य आहे? (Which of the following is a primary function of the Estimates Committee of the Parliament?)</p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> Scrutiny of CAG's reports</label>
+                <label><input type="radio" name="q8" value="B"> Suggesting economies and improvements in administration</label>
+                <label><input type="radio" name="q8" value="C"> Examining ordinances</label>
+                <label><input type="radio" name="q8" value="D"> Approval of annual budgets</label>
+            </div>
+            <div class="feedback" id="feedback8"></div>
+        </div>
+
+        <div class="question" id="q9">
+            <p>9. नागरिकांची सनद (Citizen's Charter) हे दस्तऐवज कोणत्या संबंधांवर लक्ष केंद्रित करते? (The Citizen's Charter is a document that focuses on which relationship?)</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> Executive and Judiciary (कार्यकारी आणि न्यायपालिका)</label>
+                <label><input type="radio" name="q9" value="B"> Center and State (केंद्र आणि राज्य)</label>
+                <label><input type="radio" name="q9" value="C"> Citizen and Administration (नागरिक आणि प्रशासन)</label>
+                <label><input type="radio" name="q9" value="D"> India and International Bodies</label>
+            </div>
+            <div class="feedback" id="feedback9"></div>
+        </div>
+
+        <div class="question" id="q10">
+            <p>10. कोणत्या संस्थेने भारतात नियोजन आयोगाची (Planning Commission) जागा घेतली आहे? (Which body has replaced the Planning Commission in India?)</p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> Finance Commission (वित्त आयोग)</label>
+                <label><input type="radio" name="q10" value="B"> NITI Aayog (नीती आयोग)</label>
+                <label><input type="radio" name="q10" value="C"> National Development Council (NDC)</label>
+                <label><input type="radio" name="q10" value="D"> Inter-State Council (आंतर-राज्य परिषद)</label>
+            </div>
+            <div class="feedback" id="feedback10"></div>
+        </div>
+        
+        <div class="question" id="q11">
+            <p>11. केंद्रीय लोकसेवा आयोग (UPSC) ची स्थापना भारतीय संविधानाच्या कोणत्या कलमांतर्गत झाली आहे? (The Union Public Service Commission (UPSC) is established under which article of the Indian Constitution?)</p>
+            <div class="options">
+                <label><input type="radio" name="q11" value="A"> Article 315</label>
+                <label><input type="radio" name="q11" value="B"> Article 320</label>
+                <label><input type="radio" name="q11" value="C"> Article 312</label>
+                <label><input type="radio" name="q11" value="D"> Article 308</label>
+            </div>
+            <div class="feedback" id="feedback11"></div>
+        </div>
+        
+        <div class="question" id="q12">
+            <p>12. **तालुका** स्तरावरील प्रशासनाचा प्रमुख कोण असतो? (Who is the head of the administration at the **Taluka** level?)</p>
+            <div class="options">
+                <label><input type="radio" name="q12" value="A"> Tahsildar (तहसीलदार)</label>
+                <label><input type="radio" name="q12" value="B"> Collector (जिल्हाधिकारी)</label>
+                <label><input type="radio" name="q12" value="C"> CEO, Zilla Parishad</label>
+                <label><input type="radio" name="q12" value="D"> Block Development Officer (BDO)</label>
+            </div>
+            <div class="feedback" id="feedback12"></div>
+        </div>
+        
+        <div class="question" id="q13">
+            <p>13. **CVC** (केंद्रीय दक्षता आयोग) कशाच्या शिफारशीनुसार स्थापित केले गेले? (The **CVC** (Central Vigilance Commission) was established based on the recommendation of which body?)</p>
+            <div class="options">
+                <label><input type="radio" name="q13" value="A"> First Administrative Reforms Commission</label>
+                <label><input type="radio" name="q13" value="B"> Kothari Committee</label>
+                <label><input type="radio" name="q13" value="C"> Sarkaria Commission</label>
+                <label><input type="radio" name="q13" value="D"> Santhanam Committee</label>
+            </div>
+            <div class="feedback" id="feedback13"></div>
+        </div>
+        
+        <div class="question" id="q14">
+            <p>14. भारतामध्ये **अर्थसंकल्पाची** प्रक्रिया कोणत्या महिन्यामध्ये सुरू होते? (The **Budgetary** process in India typically begins in which month?)</p>
+            <div class="options">
+                <label><input type="radio" name="q14" value="A"> January</label>
+                <label><input type="radio" name="q14" value="B"> February</label>
+                <label><input type="radio" name="q14" value="C"> March</label>
+                <label><input type="radio" name="q14" value="D"> April</label>
+            </div>
+            <div class="feedback" id="feedback14"></div>
+        </div>
+        
+        <div class="question" id="q15">
+            <p>15. सार्वजनिक सेवा वेळेवर पुरवल्या जाव्यात यासाठी नागरिक-केंद्रित सुधारणा म्हणून कोणता कायदा लागू केला गेला? (Which citizen-centric reform law was enacted to ensure timely delivery of public services?)</p>
+            <div class="options">
+                <label><input type="radio" name="q15" value="A"> Right to Public Services Act</label>
+                <label><input type="radio" name="q15" value="B"> Good Governance Act</label>
+                <label><input type="radio" name="q15" value="C"> Transparency Act</label>
+                <label><input type="radio" name="q15" value="D"> Accountability Act</label>
+            </div>
+            <div class="feedback" id="feedback15"></div>
+        </div>
+        
+        <div class="question" id="q16">
+            <p>16. अखिल भारतीय सेवा, केंद्रीय सेवा आणि राज्य सेवा यामधील भरतीची सर्वोच्च संस्था कोणती आहे? (Which is the apex recruiting body for All India Services, Central Services, and State Services?)</p>
+            <div class="options">
+                <label><input type="radio" name="q16" value="A"> State Public Service Commission</label>
+                <label><input type="radio" name="q16" value="B"> Staff Selection Commission</label>
+                <label><input type="radio" name="q16" value="C"> Union Public Service Commission</label>
+                <label><input type="radio" name="q16" value="D"> Private Recruitment Agencies</label>
+            </div>
+            <div class="feedback" id="feedback16"></div>
+        </div>
+        
+        <div class="question" id="q17">
+            <p>17. NDRF (National Disaster Response Force) ही कोणत्या केंद्रीय मंत्रालयाच्या अंतर्गत येते? (NDRF falls under which Union Ministry?)</p>
+            <div class="options">
+                <label><input type="radio" name="q17" value="A"> Ministry of Home Affairs</label>
+                <label><input type="radio" name="q17" value="B"> Ministry of Environment</label>
+                <label><input type="radio" name="q17" value="C"> Ministry of Finance</label>
+                <label><input type="radio" name="q17" value="D"> Ministry of Health</label>
+            </div>
+            <div class="feedback" id="feedback17"></div>
+        </div>
+        
+        <div class="question" id="q18">
+            <p>18. भारतातील 'महालेखापाल' (Comptroller and Auditor General - CAG) यांच्या पदाची नेमणूक कोण करतात? (Who appoints the Comptroller and Auditor General (CAG) of India?)</p>
+            <div class="options">
+                <label><input type="radio" name="q18" value="A"> Prime Minister</label>
+                <label><input type="radio" name="q18" value="B"> Chief Justice of India</label>
+                <label><input type="radio" name="q18" value="C"> Parliament</label>
+                <label><input type="radio" name="q18" value="D"> President</label>
+            </div>
+            <div class="feedback" id="feedback18"></div>
+        </div>
+        
+        <div class="question" id="q19">
+            <p>19. लाल बहादूर शास्त्री राष्ट्रीय प्रशासन अकादमी (LBSNAA) कोणत्या राज्यात आहे? (Lal Bahadur Shastri National Academy of Administration (LBSNAA) is located in which state?)</p>
+            <div class="options">
+                <label><input type="radio" name="q19" value="A"> Uttarakhand (उत्तराखंड)</label>
+                <label><input type="radio" name="q19" value="B"> Maharashtra (महाराष्ट्र)</label>
+                <label><input type="radio" name="q19" value="C"> Uttar Pradesh (उत्तर प्रदेश)</label>
+                <label><input type="radio" name="q19" value="D"> Himachal Pradesh (हिमाचल प्रदेश)</label>
+            </div>
+            <div class="feedback" id="feedback19"></div>
+        </div>
+        
+        <div class="question" id="q20">
+            <p>20. ED (अंमलबजावणी संचालनालय) हे कोणत्या केंद्रीय मंत्रालयाच्या अंतर्गत येते? (The Enforcement Directorate (ED) operates under which Union Ministry?)</p>
+            <div class="options">
+                <label><input type="radio" name="q20" value="A"> Ministry of Home Affairs</label>
+                <label><input type="radio" name="q20" value="B"> Ministry of Finance (Revenue Department)</label>
+                <label><input type="radio" name="q20" value="C"> Ministry of Law and Justice</label>
+                <label><input type="radio" name="q20" value="D"> Ministry of Corporate Affairs</label>
+            </div>
+            <div class="feedback" id="feedback20"></div>
+        </div>
+        
+        <div class="question" id="q21">
+            <p>21. प्रशासनात 'स्वयंसेवी संस्थां (NGOs)' ची भूमिका मुख्यतः कशासाठी असते? (The role of 'NGOs' in administration is primarily for what purpose?)</p>
+            <div class="options">
+                <label><input type="radio" name="q21" value="A"> Law enforcement</label>
+                <label><input type="radio" name="q21" value="B"> Political campaigning</label>
+                <label><input type="radio" name="q21" value="C"> Service delivery and citizen participation</label>
+                <label><input type="radio" name="q21" value="D"> Financial auditing</label>
+            </div>
+            <div class="feedback" id="feedback21"></div>
+        </div>
+        
+        <div class="question" id="q22">
+            <p>22. संसदेच्या 'सार्वजनिक उपक्रम समिती' (Committee on Public Undertakings) चा उद्देश काय आहे? (What is the purpose of the Parliamentary 'Committee on Public Undertakings'?)</p>
+            <div class="options">
+                <label><input type="radio" name="q22" value="A"> Scrutinizing railway budget</label>
+                <label><input type="radio" name="q22" value="B"> Examining grants of ministries</label>
+                <label><input type="radio" name="q22" value="C"> Evaluating government schemes</label>
+                <label><input type="radio" name="q22" value="D"> Scrutinizing the working of PSUs</label>
+            </div>
+            <div class="feedback" id="feedback22"></div>
+        </div>
+        
+        <div class="question" id="q23">
+            <p>23. 'उत्क्रांती' (Evolution) आणि 'घटनात्मक संदर्भ' (Constitutional Context) यानुसार भारतीय प्रशासनाचा मूळ आधार काय आहे? (What is the fundamental basis of Indian Administration according to its 'Evolution' and 'Constitutional Context'?)</p>
+            <div class="options">
+                <label><input type="radio" name="q23" value="A"> Parliamentary Democracy and Rule of Law</label>
+                <label><input type="radio" name="q23" value="B"> Military Governance</label>
+                <label><input type="radio" name="q23" value="C"> Monarchical System</label>
+                <label><input type="radio" name="q23" value="D"> Corporate Structure</label>
+            </div>
+            <div class="feedback" id="feedback23"></div>
+        </div>
+        
+        <div class="question" id="q24">
+            <p>24. राज्य लोकसेवा आयोगाचे (MPSC) अध्यक्ष आणि सदस्यांना कोण पदावरून काढू शकते? (Who can remove the Chairman and members of a State Public Service Commission (e.g., MPSC)?)</p>
+            <div class="options">
+                <label><input type="radio" name="q24" value="A"> Governor (राज्यपाल)</label>
+                <label><input type="radio" name="q24" value="B"> President (राष्ट्रपती)</label>
+                <label><input type="radio" name="q24" value="C"> Chief Minister (मुख्यमंत्री)</label>
+                <label><input type="radio" name="q24" value="D"> State Legislature (राज्य विधिमंडळ)</label>
+            </div>
+            <div class="feedback" id="feedback24"></div>
+        </div>
+        
+        <div class="question" id="q25">
+            <p>25. "वोट ऑन अकाउंट" (Vote on Account) कशाशी संबंधित आहे? (What does "Vote on Account" relate to?)</p>
+            <div class="options">
+                <label><input type="radio" name="q25" value="A"> Interim grant to meet expenditure until the budget is passed</label>
+                <label><input type="radio" name="q25" value="B"> Emergency fund for disasters</label>
+                <label><input type="radio" name="q25" value="C"> Funds reserved for defense</label>
+                <label><input type="radio" name="q25" value="D"> Foreign aid received by India</label>
+            </div>
+            <div class="feedback" id="feedback25"></div>
+        </div>
+        
+        <div class="question" id="q26">
+            <p>26. भ्रष्टाचार प्रतिबंधक कायदा (Prevention of Corruption Act) कोणत्या वर्षी लागू करण्यात आला? (The Prevention of Corruption Act was enacted in which year?)</p>
+            <div class="options">
+                <label><input type="radio" name="q26" value="A"> 1947</label>
+                <label><input type="radio" name="q26" value="B"> 1968</label>
+                <label><input type="radio" name="q26" value="C"> 1988</label>
+                <label><input type="radio" name="q26" value="D"> 2005</label>
+            </div>
+            <div class="feedback" id="feedback26"></div>
+        </div>
+        
+        <div class="question" id="q27">
+            <p>27. राष्ट्रीय आपत्ती व्यवस्थापन प्राधिकरण (NDMA) चे प्रमुख कोण असतात? (Who is the chairperson of the National Disaster Management Authority (NDMA)?)</p>
+            <div class="options">
+                <label><input type="radio" name="q27" value="A"> Home Minister</label>
+                <label><input type="radio" name="q27" value="B"> Chief of Defence Staff</label>
+                <label><input type="radio" name="q27" value="C"> Cabinet Secretary</label>
+                <label><input type="radio" name="q27" value="D"> Prime Minister</label>
+            </div>
+            <div class="feedback" id="feedback27"></div>
+        </div>
+        
+        <div class="question" id="q28">
+            <p>28. NITI Aayog चा पूर्ण अर्थ काय आहे? (What does NITI Aayog stand for?)</p>
+            <div class="options">
+                <label><input type="radio" name="q28" value="A"> National Institution for Transforming India</label>
+                <label><input type="radio" name="q28" value="B"> National Initiative for Transparency in India</label>
+                <label><input type="radio" name="q28" value="C"> National Integrated Trade Institution</label>
+                <label><input type="radio" name="q28" value="D"> New Indian Technology Interface</label>
+            </div>
+            <div class="feedback" id="feedback28"></div>
+        </div>
+        
+        <div class="question" id="q29">
+            <p>29. महाराष्ट्रात जिल्हा स्तरावर 'जिल्हा नियोजन आणि विकास मंडळाचे' (DPDC) अध्यक्ष कोण असतात? (Who is the chairperson of the 'District Planning and Development Council' (DPDC) at the district level in Maharashtra?)</p>
+            <div class="options">
+                <label><input type="radio" name="q29" value="A"> Collector (जिल्हाधिकारी)</label>
+                <label><input type="radio" name="q29" value="B"> Chief Executive Officer</label>
+                <label><input type="radio" name="q29" value="C"> Guardian Minister (पालकमंत्री)</label>
+                <label><input type="radio" name="q29" value="D"> Mayor/Zilla Parishad President</label>
+            </div>
+            <div class="feedback" id="feedback29"></div>
+        </div>
+        
+        <div class="question" id="q30">
+            <p>30. केंद्रीय सेवांचे (Central Services) उदाहरण खालीलपैकी कोणते आहे? (Which of the following is an example of a Central Service?)</p>
+            <div class="options">
+                <label><input type="radio" name="q30" value="A"> Indian Administrative Service (IAS)</label>
+                <label><input type="radio" name="q30" value="B"> Indian Foreign Service (IFS)</label>
+                <label><input type="radio" name="q30" value="C"> Maharashtra Administrative Service (MAS)</label>
+                <label><input type="radio" name="q30" value="D"> Indian Forest Service (IFoS)</label>
+            </div>
+            <div class="feedback" id="feedback30"></div>
+        </div>
+
+
+        <button type="button" class="submit-btn" onclick="checkAnswers()">Check Answers</button>
+    </form>
+    
+    <div class="results" id="results"></div>
+
+</div>
+
+<script>
+    // Define the correct answers for all 30 questions
+    const correctAnswers = {
+        q1: 'B', q2: 'B', q3: 'C', q4: 'D', q5: 'C', 
+        q6: 'C', q7: 'C', q8: 'B', q9: 'C', q10: 'B', 
+        q11: 'A', q12: 'A', q13: 'D', q14: 'B', q15: 'A', 
+        q16: 'C', q17: 'A', q18: 'D', q19: 'A', q20: 'B', 
+        q21: 'C', q22: 'D', q23: 'A', q24: 'B', q25: 'A', 
+        q26: 'C', q27: 'D', q28: 'A', q29: 'C', q30: 'B'
+    };
+    
+    const totalQuestions = Object.keys(correctAnswers).length;
+
+    function checkAnswers() {
+        let score = 0;
+        const form = document.getElementById('quizForm');
+        
+        // 1. Get User Details
+        const surname = document.getElementById('surname').value.trim();
+        const name = document.getElementById('name').value.trim();
+        const className = document.getElementById('class').value.trim();
+        const rollno = document.getElementById('rollno').value.trim();
+
+        // Check if details are filled
+        if (!surname || !name || !className || !rollno) {
+            alert("Please fill in all your details (Surname, Name, Class, Roll Number) before checking answers.");
+            return;
+        }
+
+        // 2. Capture Submission Time
+        const submissionTime = new Date().toLocaleString('en-IN', { 
+            year: 'numeric', 
+            month: 'short', 
+            day: 'numeric', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit',
+            hour12: false 
+        });
+
+        // 3. Check Answers and Calculate Score
+        for (let i = 1; i <= totalQuestions; i++) {
+            const qName = 'q' + i;
+            const feedbackId = 'feedback' + i;
+            const correctAnswer = correctAnswers[qName];
+            
+            let selectedOption = '';
+            const radioButtons = form.elements[qName];
+            if (radioButtons) {
+                for (let j = 0; j < radioButtons.length; j++) {
+                    if (radioButtons[j].checked) {
+                        selectedOption = radioButtons[j].value;
+                        break;
+                    }
+                }
+            }
+            
+            const feedbackElement = document.getElementById(feedbackId);
+
+            if (selectedOption) {
+                if (selectedOption === correctAnswer) {
+                    score++;
+                    feedbackElement.textContent = '✅ Correct Answer!';
+                    feedbackElement.className = 'feedback correct';
+                } else {
+                    feedbackElement.textContent = '❌ Incorrect. The correct answer is ' + correctAnswer + '.';
+                    feedbackElement.className = 'feedback incorrect';
+                }
+            } else {
+                 feedbackElement.textContent = '⚠️ Please select an answer.';
+                 feedbackElement.className = 'feedback incorrect';
+            }
+        }
+        
+        // 4. Generate Shareable Output
+        const outputString = `TIME: ${submissionTime}, SURNAME: ${surname}, NAME: ${name}, CLASS: ${className}, ROLL_NO: ${rollno}, SCORE: ${score}/${totalQuestions}`;
+        
+        // 5. Display Final Score and Instructions
+        const resultsElement = document.getElementById('results');
+        resultsElement.innerHTML = `
+            <h2>🎉 Quiz Complete! (प्रश्नमंजुषा पूर्ण)</h2>
+            <p>Your Score: <strong>${score} / ${totalQuestions}</strong></p>
+            <p>Percentage: <strong>${(score / totalQuestions * 100).toFixed(2)}%</strong></p>
+            <p>Submission Time: <strong>${submissionTime}</strong></p>
+            
+            <p class="copy-instruction">
+                🔴 **IMPORTANT: COPY THE TEXT BELOW TO SUBMIT YOUR SCORE!** <br>
+                This text contains your verified details, score, and timestamp.
+            </p>
+            <div class="copy-output" id="outputData">${outputString}</div>
+        `;
+    }
+</script>
+
+</body>
+</html>
